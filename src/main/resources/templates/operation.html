@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<form action="/calculator/operation" method="post">
+    <input type="number" name="num1">
+    <select name="operation">
+        <option value="sum" selected>+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">/</option>
+    </select>
+    <input type="number" name="num2">
+    <button>Submit</button>
+</form>
+<p th:text="${result}"></p>
+</body>
+</html>

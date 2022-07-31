@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Number 1</th>
+        <th>Operation</th>
+        <th>Number 2</th>
+        <th>Operation</th>
+        <th>Result</th>
+    </tr>
+    <tr th:each="op : ${operationHistory}">
+        <td th:text="${op.num1}"></td>
+        <td th:text="${op.operation}"></td>
+        <td th:text="${op.num2}"></td>
+        <td>=</td>
+        <td th:text="${op.result}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
