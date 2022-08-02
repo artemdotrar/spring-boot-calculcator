@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Optional;
 
 @Controller
-
 @RequestMapping("/calculator")
 public class CalculatorController {
 
@@ -32,19 +31,12 @@ public class CalculatorController {
         } else {
             model.addAttribute("result", "error");
         }
-
         return "operation";
     }
 
     @GetMapping("/history")
     public String history(Model model){
         model.addAttribute("operationHistory", calculatorService.getHistory());
-
         return "history";
     }
-
-
-
-
-
 }
